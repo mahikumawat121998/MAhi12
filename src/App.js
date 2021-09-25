@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+ 
+import { useState } from 'react';
 import './App.css';
+import Modal from './Modal/Modal';
+import Mahi from './Modal/Mahi';
+ 
+ 
+import {
+  BrowserRouter as Router ,Route
+} from "react-router-dom";
+import Modal1 from './Modal/Modal1';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const  App=()=> {
+ 
+
+  const [openModal, setOpenModal] =useState(false)
+  return (<>
+    
+  <div>
+    <button onClick={()=>{setOpenModal(true);}}>click Me</button>
+    {openModal && <Modal closeModal={setOpenModal}/>}
+  </div>
+  <Router>
+     
+    <Route to="/mahilex" exact component={Modal1} />
+  
+  </Router> 
+    
+ </> );
 }
 
 export default App;

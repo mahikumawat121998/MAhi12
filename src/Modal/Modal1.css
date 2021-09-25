@@ -1,0 +1,23 @@
+ .footer1{
+   
+    flex: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* position: fixed; */
+    margin-top: 390px;
+  
+  
+ }
+ .btn{
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: #067c70;
+  color: white;
+  border-radius: 2px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: -196px;
+ }
